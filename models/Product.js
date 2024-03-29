@@ -36,6 +36,7 @@ Product.init(
     },
     // tags: {
 
+
     // }
   },
   {
