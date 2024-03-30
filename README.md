@@ -6,7 +6,7 @@
 
 ## Description
 
-Online retail sotres need a way to manage and track their inventory. That is where this E-Commerce Back-End application can be utalized. The application simulates the entire back-end of an e-comerce store, allower the user to add, delete, and update inventory, and view inventory and their inter-connections between category, product, and tags.
+Online retail stores need a way to manage and track their inventory, this is where the E-Commerce Back-End application can be utilized. The application simulates just the back-end of an e-comerce store, allowing the user to add, delete, update, and view inventory and the inventories inter-connections between category, product, and tags.
 
 ## Table of Contents
 
@@ -16,32 +16,33 @@ Online retail sotres need a way to manage and track their inventory. That is whe
 - [Questions](#questions)
 
 ## Installation
-*Note 'postgres' and 'password' are the default PostgresSQL username and password, if the user has a different username or password, then the 'postgres' and 'password' in step 2 must be adjusted accordingly. Aditionally the user must change the values in index.js lines 36 and 37, respectively.
+*Note 'postgres' and 'password' are the default PostgresSQL username and password, if the user has a different username or password, then the 'postgres' and 'password' in step 3 must be adjusted accordingly. Additionally, the user must change the values in ``.env`` file, lines 2 and 3, respectively.
 
-1. Dowload, copy, or clone the code to your local machine through github and open in vscode, or another approperate IDE. 
+1. Download, copy, or clone the code to your local machine through GitHub and open in VSCode, or another appropriate IDE. 
 
-2. Right click on 'index.js' and select 'Open In Integrated Terminal', then run the command ```npm install``` to install all required node files. 
+2. Right click on 'server.js' and select 'Open In Integrated Terminal', then run the command ```npm install``` to install all required node files. 
 
 3. The user must then launch Postgres by running the command: ```psql -U postgres```, in the terminal then running the command: ```password```. 
 
 4. Continue in the terminal by running the command: ```\i db/schema.sql```, to initialize their database, then run the command: ```\q```, to exit PostresSQL.
 
-5. Once out of Postgres the user can run the command: ```node sees/index.js```, to seed the application with the prebuilt data.
+5. Once out of Postgres the user can run the command: ```node seed/index.js```, to seed the application with the prebuilt data.
 
-6. Finally the user can run the command: ```node server.js```, to launch the application.
+6. Finally, the user can run the command: ```node server.js```, to launch the application.
 
 <p align="center">
-    <img alt='Gif of installation process' src="">
+    <img alt='Gif of installation process' src="./assets/images/installationGif.gif">
 
 
 ## Usage
 
-Video demonstating usage:  
+Video demonstrating usage:  https://www.youtube.com/watch?v=lIgMrvm-vfo
 
-Using an application like Insomnia to perform RESTful api requests, the user can perform the follow requests at ```/api/products```, ```/api/categories```, ```/api/tags```, respectively: a GET request to view everything in the selected field, a POST request to 
+Using an application like Insomnia that can perform RESTful API requests, the user can perform requests to the following routes: ```/api/products```, ```/api/categories```, ```/api/tags```, respectively. The user can then perform the following: a GET request to view everything in the selected route, a GET request to select a specific item of the selected route via the id, i.e ```/api/products/3```, a POST request to add an object in the selected route, a PUT request to edit an object in the selected route, and a DELETE request to delete an object from the selected route.
 
-<p align="center">
-    <img alt='Image of prompt and action' src="">
+POST AND PUT requests need to follow the following json parameters:
+
+![image of POST request for products](./assets/images/POSTprod.JPG) ![image of POST request for category](./assets/images/POSTcata.JPG) ![image of POST request for tags](./assets/images/POSTtag.JPG)
 
 ## Credits
 
@@ -53,11 +54,11 @@ This application is covered under Unlicense license.
 
 ## Features
 
-This application boasts the integration of PostgressSQL databases into JavaScript, through the use of Sequalize. Aditionally this application features express.js to build a local server to perform a variety of POST, GET, PUT and DELETE requests.
+This application boasts the integration of PostgressSQL databases into JavaScript, through the use of Sequalize. Additionally this application features express.js to build a local server to perform a variety of POST, GET, PUT and DELETE requests.
 
 ## Questions
 
-Any questions please reachout at: samuelfullerca@gmail.com
+Any questions please reach-out at: samuelfullerca@gmail.com
 
 To view additional applications developed by myself, checkout my GitHub profile: 
 <a href="https://github.com/SamuelFullerCA"> SamuelFullerCA </a>
